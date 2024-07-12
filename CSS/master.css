@@ -43,6 +43,8 @@ form h2{
     margin-bottom: 20px;
 }
 .input-flied{
+    position: relative;
+    margin: 15px 0;
     border-bottom: 2px solid #ccc;
 }
 .input-flied input{
@@ -51,4 +53,22 @@ form h2{
     background: transparent;
     border: none;
     outline: none;
+    color: #fff;
+    font-size: 1rem;
+}
+.input-flied label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1rem;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+.input-flied input:focus~label,
+.input-flied input:valid~label{
+    transform: translateY(-120%);
+    font-size: 0.8rem;
+    top: 10px;
 }
